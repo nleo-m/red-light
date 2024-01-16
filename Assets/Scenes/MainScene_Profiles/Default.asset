@@ -219,19 +219,19 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: -40
+    value: -25
   tint:
     overrideState: 0
     value: -50
   colorFilter:
     overrideState: 1
-    value: {r: 0.63720983, g: 0.61594874, b: 0.7735849, a: 1}
+    value: {r: 0.65443736, g: 0.6156863, b: 0.77254903, a: 1}
   hueShift:
     overrideState: 0
     value: 0
   saturation:
     overrideState: 1
-    value: -30
+    value: -25
   brightness:
     overrideState: 0
     value: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
     value: -1.75
   contrast:
     overrideState: 1
-    value: 1.4
+    value: 8
   mixerRedOutRedIn:
     overrideState: 0
     value: 100

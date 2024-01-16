@@ -31,7 +31,15 @@ public class PlayerController : MonoBehaviour {
 
 
 	void CheckForWaterHeight(){
-		gravity = transform.position.y < waterHeight ? 0f : - 9.81f;
+		if (transform.position.y < waterHeight)
+		{
+			gravity = 0f;
+			PlayerState.isUnderWater = true;
+		} else
+		{
+            gravity = -9.81f;
+			PlayerState.isUnderWater = false;
+        }
 	}
 
 
@@ -80,6 +88,7 @@ public class PlayerController : MonoBehaviour {
 		velocity.y += gravity * Time.deltaTime;
 		character.Move(velocity * Time.deltaTime);
 
+		CheckForWaterHeight();
 	}
 
 

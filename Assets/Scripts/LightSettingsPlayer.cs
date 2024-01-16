@@ -8,6 +8,7 @@ public class LightSettingsPlayer : MonoBehaviour
     [SerializeField] PostProcessVolume ppVolume;
     [SerializeField] PostProcessProfile Default;
     [SerializeField] PostProcessProfile NightVision;
+    [SerializeField] PostProcessProfile UnderWater;
     [SerializeField] GameObject NightVisionOverlay;
     [SerializeField] GameObject Flashlight;
     [SerializeField] AudioClip FLSwitchAudio;
@@ -45,12 +46,19 @@ public class LightSettingsPlayer : MonoBehaviour
             lightPower.intensity = 2;
             flashLightSwitch();
         }
+
+        underWaterSwitch();
     }
 
     void nightVisionSwitch() {
         PlayerState.isNightVisionOn = !PlayerState.isNightVisionOn;
         ppVolume.profile = PlayerState.isNightVisionOn ? NightVision : Default;
         NightVisionOverlay.SetActive(PlayerState.isNightVisionOn);
+    }
+
+    void underWaterSwitch()
+    {
+        ppVolume.profile = PlayerState.isUnderWater ? UnderWater: Default;
     }
 
     void flashLightSwitch() {

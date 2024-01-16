@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour {
     public static int health = 100;
-    public static bool isFlashLightOn = false, isNightVisionOn = false;
+    public static bool isFlashLightOn = false, isNightVisionOn = false, isUnderWater = false;
     public static float flashLightPower = 1, nightVisionPower = 1;
     public static List<string> items = new List<string>();
 
